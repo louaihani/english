@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم الإنجليزية - EnglishDZ</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#" onclick="showSection('landing-page')">EnglishDZ</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="profile-container">
+                <img src="/profile.png" alt="Profile" class="profile-pic" onclick="showSection('login-page')">
+            </div>
+            <ul>
+                <li><a href="#" onclick="showSection('meeting-page')">الاجتماعات</a></li>
+                <li><a href="#" onclick="showSection('stats-page')">الإحصائيات</a></li>
+                <li><a href="#" onclick="showSection('faq-page')">الأسئلة الشائعة</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="landing-page" class="page active">
+            <div class="content">
+                <h1>مرحبًا بكم في تعلم الإنجليزية مع EnglishDZ</h1>
+                <p>هل ترغب في تحسين مهاراتك في اللغة الإنجليزية؟</p>
+                <p>هنا ستجد مجموعة من الدروس والتقنيات لمساعدتك في التعلم. سواء كنت مبتدئًا أو لديك خلفية، نحن هنا لدعمك.</p>
+                <p>انضم إلى مجتمعنا وابدأ رحلتك في تعلم اللغة الإنجليزية مع ممارسات حقيقية مع الآخرين.</p>
+                <p>استمتع بمواد تعليمية متنوعة، بما في ذلك:</p>
+                <ul>
+                    <li>دروس فيديو تفاعلية</li>
+                    <li>تمارين تفاعلية لتحسين مهاراتك</li>
+                    <li>فرص للتحدث مع متعلمين آخرين</li>
+                </ul>
+                <button class="startingButton" onclick="showSection('lessons-page')">ابدأ الآن</button>
+            </div>
+            <footer id="contact-us">
+                <h2>تواصل معنا</h2>
+                <p>تابعنا على وسائل التواصل الاجتماعي:</p>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://t.me" target="_blank">Telegram</a></li>
+                    <li><a href="mailto:info@englishdz.com">Email</a></li>
+                </ul>
+            </footer>
+        </section>
+        
+        <section id="login-page" class="page">
+            <div class="content">
+                <h1>تسجيل الدخول</h1>
+                <form id="login-form">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <input type="password" placeholder="كلمة المرور" required>
+                    <button type="submit">تسجيل الدخول</button>
+                </form>
+                <p><a href="#">نسيت كلمة السر؟</a></p>
+                <p>ليس لديك حساب؟ <a href="#" onclick="showSection('signup-page')">إنشاء حساب</a></p>
+            </div>
+        </section>
+
+        <section id="signup-page" class="page">
+            <div class="content">
+                <h1>إنشاء حساب</h1>
+                <form id="signup-form">
+                    <input type="text" placeholder="الاسم" required>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <input type="password" placeholder="كلمة المرور" required>
+                    <button type="submit">إنشاء حساب</button>
+                </form>
+            </div>
+        </section>
+        
+       
+        <section id="meeting-page" class="page">
+            <div class="content">
+                <h1>الانضمام إلى اجتماع</h1>
+                <p>تواصل مع الآخرين لممارسة اللغة الإنجليزية.</p>
+                <button onclick="startMeeting()">ابدأ الاجتماع</button>
+                <button onclick="startMeeting()">انضم الى اجتماع</button>
+            </div>
+        </section>
+
+        <section id="stats-page" class="page">
+            <div class="content">
+                <h1>الإحصائيات</h1>
+                <p>عرض إحصائيات تعلمك ومتابعة تقدمك.</p>
+                <button>عرض الإحصائيات</button>
+            </div>
+        </section>
+        
+        <section id="faq-page" class="page">
+            <div class="content">
+                <h1>الأسئلة الشائعة</h1>
+                <div class="faq-item">
+                    <h3>ما هي EnglishDZ؟</h3>
+                    <p>EnglishDZ هو موقع لتعلم اللغة الإنجليزية عبر الإنترنت من خلال مجموعة متنوعة من الدروس والأنشطة التفاعلية.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>كيف يمكنني التسجيل؟</h3>
+                    <p>يمكنك التسجيل عن طريق الضغط على زر التسجيل في الصفحة الرئيسية وملء النموذج المطلوب.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>هل الموقع مجاني؟</h3>
+                    <p>نعم، يمكنك الوصول إلى العديد من الدروس والموارد مجانًا. هناك بعض الميزات الإضافية التي قد تتطلب اشتراكًا.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
